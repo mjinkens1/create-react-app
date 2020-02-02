@@ -675,6 +675,7 @@ module.exports = function(webpackEnv) {
           clientsClaim: true,
           exclude: [/\.map$/, /asset-manifest\.json$/],
           importWorkboxFrom: 'cdn',
+          importScripts: ['./service-worker-custom.js', 'localforage.min.js'],
           navigateFallback: paths.publicUrlOrPath + 'index.html',
           navigateFallbackBlacklist: [
             // Exclude URLs starting with /_, as they're likely an API call
